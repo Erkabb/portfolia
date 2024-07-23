@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -25,9 +25,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.intro {
+  width: 600px;
+  height: 364px;
+}
+.coverpic {
+  width: 584px;
+  height: 560px;
+}
+.picture {
+  width: 400px;
+  height: 480px;
+  background-position: center;
+  background-size: cover;
 }
