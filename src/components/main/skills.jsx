@@ -16,27 +16,27 @@ const Skills = () => {
       </div>
       <div className="flex flex-row gap-5">
         <div>
-          <IoLogoJavascript />
+          <IoLogoJavascript size={64} />
           <span>Javascript</span>
         </div>
         <div>
-          <FaReact />
+          <FaReact size={64} />
           <span>React</span>
         </div>
         <div>
-          <FaNodeJs />
+          <FaNodeJs size={64} />
           <span>Node.js</span>
         </div>
         <div>
-          <RiNextjsLine />
+          <RiNextjsLine size={64} />
           <span>Next.js</span>
         </div>
         <div>
-          <FaGitSquare />
+          <FaGitSquare size={64} />
           <span>Git</span>
         </div>
         <div>
-          <RiTailwindCssFill />
+          <RiTailwindCssFill size={64} />
           <span>Tailwind.css</span>
         </div>
       </div>
