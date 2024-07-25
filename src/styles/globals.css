@@ -39,3 +39,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+.exp {
+  width: 896px;
+}
+.work {
+  width: 1152px;
+  height: 480px;
+}
