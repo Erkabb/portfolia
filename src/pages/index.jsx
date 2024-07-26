@@ -6,7 +6,6 @@ import Pfp from "@/components/main/pfp";
 import Skills from "@/components/main/skills";
 import Work from "@/components/main/work";
 import HeadofWork from "@/components/main/work/headofWork";
-import Secondwork from "@/components/main/work/secondwork";
 
 const experiences = [
   {
@@ -55,11 +54,9 @@ const worksection = [
       "Git",
     ],
   },
-];
-
-const nextwork = [
   {
-    prophoto: "/images/pic2.png", nameofpro: "Mentorhub",  lang: [
+    project: "/images/pic2.png",
+    types: [
       "React",
       "Next.js",
       "Typescript",
@@ -71,13 +68,29 @@ const nextwork = [
       "Storybook",
       "Git",
     ],
+    projectName: "Mentorhub",
   },
- 
-  
-]
+  {
+    project: "/images/pic3.png",
+    types: [
+      "React",
+      "Next.js",
+      "Typescript",
+      "Nest.js",
+      "PostgreSQL",
+      "Tailwind.css",
+      "Figma",
+      "Cypress",
+      "Storybook",
+      "Git",
+    ],
+    projectName: "iToim",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="flex flex-col gap-16">
+    <main className="flex flex-col gap-16 md:flex-col">
       <div className="flex justify-center items-center gap-20 ">
         <Introduction />
         <Pfp />
@@ -93,9 +106,6 @@ export default function Home() {
       {worksection.map(({ project, projectName, types }) => (
         <Work project={project} projectName={projectName} desc={types} />
       ))}
-      {nextwork.map(({ prophoto, lang, nameofpro  }) => (
-       <Secondwork prophoto={prophoto} nameofpro={nameofpro} description={lang}/>
-     ))}
     </main>
   );
 }

@@ -1,6 +1,6 @@
 const Introduction = () => {
   return (
-    <section className="flex flex-col justify-evenly text-white intro">
+    <section className="flex flex-col justify-evenly text-white intro m-auto">
       <h1 className="text-6xl">Hi, I'm Erka</h1>
       <span className="text-base">
         I specialize in full stack development, particularly with React.js and
