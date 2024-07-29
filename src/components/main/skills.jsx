@@ -17,7 +17,7 @@ import { SiTypescript } from "react-icons/si";
 
 const Skills = () => {
   return (
-    <section className="flex flex-col items-center gap-16 mt-20">
+    <section className="flex flex-col items-center gap-16 mt-20 max-sm:w-[343px] max-sm:mx-auto ">
       <div className="h-20 w-full flex flex-col justify-center items-center gap-7 ">
         <button className="h-7 w-20 bg-gray-200 rounded-2xl text-black ">
           Skills
@@ -26,7 +26,7 @@ const Skills = () => {
           The skills, tools and technologies I am really good at:
         </span>
       </div>
-      <div className="w-[1100px] h-[370px] flex flex-row flex-wrap gap-16 text-center">
+      <div className="w-[1100px] h-[370px] flex flex-row flex-wrap gap-16 text-center max-sm:w-[343px] max-sm:h-[790px] max-sm:gap-7">
         <div>
           <IoLogoJavascript size={64} />
           <span>Javascript</span>

@@ -1,20 +1,37 @@
 import Menu from "./menu";
-import { MdOutlineLightMode } from "react-icons/md";
-import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
+import MobileMenu from "./mobile-menu";
+import { useTheme } from "next-themes";
+
+const menuList = [
+    { label: "Home", link: "/" },
+    { label: "About", link: "/#about" },
+    { label: "Work", link: "/#work" },
+    { label: "Contact", link: "/#contact" },
+  ];
 
 const Downloadbtn = () => {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="flex items-center gap-5 ">
-      <Menu />
+      <nav className="items-center justify-between  space-x-4 md:flex"/>
+        <Menu menuList={menuList} />
       <div className="border-slate-500 border-l-2 flex justify-evenly gap-5 pl-5">
-        <button>
-          <MdOutlineLightMode />
-          <MdOutlineDarkMode />
+        <button  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="p-2 rounded-full focus:outline-none focus:ring-1 focus:ring-gray-500"
+        >
+          {theme === "light" ? (
+            <MdOutlineLightMode  size={20}    className="hover:cursor-pointer" />
+          ) : (
+            <MdOutlineDarkMode size={20}className="hover:cursor-pointer" />
+          )}
+        
         </button>
-        <button className="bg-white py-[6px] px-4 rounded-xl text-black font-bold ">
+        <button className="bg-white py-[6px] px-4 rounded-xl text-black font-bold max-sm:hidden">
           Download CV
         </button>
       </div>
+      <MobileMenu/>
     </div>
   );
 };

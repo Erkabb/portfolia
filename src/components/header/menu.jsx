@@ -1,20 +1,17 @@
-const menuList = [
-    { label: "Home", link: "/" },
-    { label: "About", link: "/#about" },
-    { label: "Work", link: "/#work" },
-    { label: "Contact", link: "/#contact" },
-  ];
-  const Menu = () => {
+
+  const Menu = ({menuList}) => {
     return (
-      <div>
-        <ul className="flex gap-5 ">
+     
+        <ul className="flex space-x-4 md:flex-row max-sm:hidden">
           {menuList.map((menu) => (
             <li>
-              <a href={menu.link}>{menu.label}</a>
+              <a href={`${menu.link}`} className="text-gray-700 dark:text-gray-200">
+          {menu.label}
+        </a>
             </li>
           ))}
         </ul>
-      </div>
+    
     );
   };
   

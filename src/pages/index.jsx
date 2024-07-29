@@ -4,6 +4,7 @@ import HeadofExp from "@/components/main/experiences/headofExp";
 import Introduction from "@/components/main/introduction";
 import Pfp from "@/components/main/pfp";
 import Skills from "@/components/main/skills";
+import SmallIntroduction from "@/components/main/smdisplayIntro";
 import Work from "@/components/main/work";
 import HeadofWork from "@/components/main/work/headofWork";
 
@@ -90,10 +91,11 @@ const worksection = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-16 md:flex-col">
-      <div className="flex justify-center items-center gap-20 ">
+    <main className="flex flex-col gap-16">
+      <div className="flex justify-center items-center gap-20 max-sm:flex-col max-sm:mx-auto">
         <Introduction />
         <Pfp />
+        <SmallIntroduction/>
       </div>
 
       <Aboutme />

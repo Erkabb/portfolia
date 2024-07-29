@@ -1,10 +1,6 @@
-import { IoLocationOutline } from "react-icons/io5";
-import { PiDotOutlineFill } from "react-icons/pi";
-
-
-const Introduction = () => {
-  return (
-    <section className="flex flex-col justify-evenly text-white intro max-sm:hidden">
+const SmallIntroduction = () => {
+    return (
+        <section className="flex flex-col justify-evenly text-white md:hidden px-10">
       <h1 className="text-6xl">Hi, I'm Erka</h1>
       <span className="text-base">
         I specialize in full stack development, particularly with React.js and
@@ -21,6 +17,6 @@ Available for new projects</li>
       </ul>
       <div></div>
     </section>
-  );
-};
-export default Introduction;
+    );
+}
+export default SmallIntroduction;
