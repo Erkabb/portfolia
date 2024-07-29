@@ -40,7 +40,7 @@ const Footer = () => {
           <FiGithub size={24} />
         </div>
       </div>
-      <div className="h-16 w-full bg-gray-900">
+      <div className="h-16 w-full dark:bg-gray-900 bg-gray-200">
         <span className="flex font-xs place-content-center items-center mt-5 ">
           <FaRegCopyright size={12} /> 2024 | Greetings with{" "}
           <FaHeart size={12} /> from Ulaanbaatar.
