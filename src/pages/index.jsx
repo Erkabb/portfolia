@@ -95,7 +95,7 @@ export default function Home() {
       <div className="flex justify-center items-center gap-20 max-sm:flex-col max-sm:mx-auto">
         <Introduction />
         <Pfp />
-        <SmallIntroduction/>
+        <SmallIntroduction />
       </div>
 
       <Aboutme />
@@ -105,8 +105,13 @@ export default function Home() {
         <Experience title={title} logo={logo} jobroles={jobroles} />
       ))}
       <HeadofWork />
-      {worksection.map(({ project, projectName, types }) => (
-        <Work project={project} projectName={projectName} desc={types} />
+      {worksection.map((worksec, i) => (
+        <Work
+          project={worksec.project}
+          projectName={worksec.projectName}
+          desc={worksec.types}
+          swap={i % 2}
+        />
       ))}
     </main>
   );
